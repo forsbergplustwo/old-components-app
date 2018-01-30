@@ -1,0 +1,57 @@
+<% breadcrumb = local_assigns.fetch(:breadcrumb, false) %>
+<% pagination = local_assigns.fetch(:pagination, false) %>
+<% title = local_assigns.fetch(:title, 'Page') %>
+<% actions = local_assigns.fetch(:actions, {}) %>
+<% secondary_actions = actions[:secondary_actions] || false %>
+<% primary_action = actions[:primary_action] || false %>
+
+<div class="header">
+  <% if breadcrumb.present? || pagination.present? %>
+    <div class="row">
+      <div class="col-xs-6">
+        <% if breadcrumb.present? %>
+          <div class="breadcrumb">
+            <a href="<%= breadcrumb[:url] %>"><%= use_svg('chevron-left-thinner')%><%= breadcrumb[:label] %>
+            </a>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-xs-6">
+        <% if pagination.present? %>
+          <div class="pagination">
+
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+  <div class="row title">
+    <div class="col-sm-8">
+      <h1><%= title %></h1>
+    </div>
+    <div class="col-sm-4">
+      <% if actions && primary_action.present? %>
+        <div class="primary-action">
+          <a href="<%= primary_action[:url] %>" class="btn btn-primary">
+            <%= primary_action[:label] %>
+          </a>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <% if actions %>
+    <div class="row">
+      <div class="col-xs-12">
+        <% if secondary_actions.present? %>
+          <% secondary_actions.each do |action| %>
+            <div class="secondary-actions">
+                <a href="<%= action[:url] %>">
+                  <%= use_svg(action[:icon]) %> <%= action[:label] %>
+                </a>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

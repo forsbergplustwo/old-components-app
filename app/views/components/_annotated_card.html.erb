@@ -1,0 +1,23 @@
+<%#
+Annotated card
+Layout component with description on left and card content on the right.
+%>
+
+<% message = body.present? ? body : message %>
+<% return if message.blank? %>
+<% title = local_assigns.fetch(:title, false) %>
+<% description = local_assigns.fetch(:description, false) %>
+
+<div class="row annotated_card">
+  <div class="col-md-4">
+    <h2><%= title %></h2>
+    <p><%= description %></p>
+  </div>
+  <div class="col-md-8">
+    <div class="panel">
+      <div class="panel-body">
+        <%= message %>
+      </div>
+    </div>
+  </div>
+</div>
