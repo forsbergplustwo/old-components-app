@@ -51,7 +51,7 @@ Include in needed controller and call the ReferralModule like this, passing in t
 ```ruby
 include ForsbergApp::ReferralModule
 
-example code of calling module
+ForsbergApp::ReferralModule.check_and_register(@shop, request)
 ```
 
 ## Contributing

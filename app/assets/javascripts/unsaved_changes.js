@@ -192,14 +192,14 @@ var singleDs = [];
 
 
 $(document).ready(function() {
-  var forms = $('form');
+  var forms = $('form.show-unsaved-changes');
   forms.dirrty().on("dirty", function(){
       $('body').addClass('has-unsaved-changes')
     }).on("clean", function(){
       $('body').removeClass('has-unsaved-changes')
   })
 
-  $('.add_fields, .remove_fields').on("click", function(){
+  $('form.show-unsaved-changes .add_fields, form.show-unsaved-changes .remove_fields').on("click", function(){
     $(forms).trigger("dirty");
   });
 

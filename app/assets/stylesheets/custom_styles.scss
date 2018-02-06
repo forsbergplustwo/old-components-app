@@ -54,13 +54,19 @@ li.active svg.icon {
 .page {
   padding: 0 30px;
   width: 100%;
+  h4 {
+    padding-top: 20px;
+  }
   @media (max-width: $screen-sm) {
     padding: 0 15px;
   }
 }
 
-//== FORM ERRORS
+//== FORM
 //
+h3 + .form-group {
+  margin-top: 8px;
+}
 .has-error .error.help-block {
   color: $brand-danger;
 }
@@ -104,10 +110,10 @@ li.active svg.icon {
 //== PAGE HEADER
 //
 .header {
-  margin-bottom: 20px;
   a:not(.btn) {
     color: #637381;
-    svg {top: 5px; margin-right: 5px !important;}
+    margin-right: 20px;
+    svg {top: 5px; margin-right: 1px !important;}
     &:hover {
       color: #212b35;
     }
@@ -143,16 +149,29 @@ li.active svg.icon {
 //== Annotated Card
 //
 .annotated_card {
+  margin-top: 20px;
   h2 {
     font-size: 16px;
     line-height: 24px;
     font-weight: 600;
     margin-top: 20px;
   }
+  .card h3 {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
   p {
     margin-right: 15px;
     margin-top: 16px;
+    margin-bottom: 16px;
     color: #647482;
+  }
+  p.help-block {
+    margin-top: 4px;
   }
 }
 
@@ -177,7 +196,7 @@ li.active svg.icon {
       transition-delay: 0.1s;
   }
   #sidebar {
-    z-index: 10000;
+    z-index: 100;
     position: relative;
     min-width: 240px;
     max-width: 240px;
@@ -189,7 +208,7 @@ li.active svg.icon {
     transform-origin: bottom left;
     .sidebar-header {
       width: 240px;
-      padding: 16px;
+      padding: 17px;
       background: #34485f;
       h3 {
         font-size: 22px;
@@ -334,3 +353,35 @@ li.active svg.icon {
   }
 }
 // END SIDEBAR
+
+//== Panels
+//
+.panel {
+  margin-top: 20px;
+  h2 {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-top: 4px;
+  }
+  h3 {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  p {
+    margin-top: 16px;
+    margin-bottom: 0;
+    color: #637381;
+  }
+}
+
+//== Card
+//
+.card {
+  @extend .panel;
+  padding: 20px;
+}
