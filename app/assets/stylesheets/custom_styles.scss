@@ -180,6 +180,7 @@ h3 + .form-group {
 ----------------------------------------------------- */
 .has-sidebar {
   .wrapper {
+      height: 100%;
       display: flex;
       align-items: stretch;
   }
@@ -200,13 +201,14 @@ h3 + .form-group {
     position: relative;
     min-width: 240px;
     max-width: 240px;
-    height: 100vh;
-    height: calc(100vh - 56px);
+    height: 100%;
+    height: calc(100% - 58px);
     background: #f4f6f8;
     color: #212b35;
     transition: all 0.2s cubic-bezier(0.945, 0.020, 0.270, 0.665);
     transform-origin: bottom left;
     .sidebar-header {
+      height: 58px;
       width: 240px;
       padding: 17px;
       background: #34485f;

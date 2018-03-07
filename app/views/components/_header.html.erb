@@ -38,7 +38,7 @@
               <% primary_action_data.each do |data| %>
                 data-<%= data[:key]%>="<%= data[:value]%>"
               <% end %>
-            <% end %>class="btn btn-primary">
+            <% end %> class="btn btn-primary" target="<%= primary_action[:target].present? ? primary_action[:target] : '_self' %>">
             <%= primary_action[:label] %>
           </a>
         </div>
@@ -51,7 +51,7 @@
         <% if secondary_actions.present? %>
           <div class="secondary-actions">
             <% secondary_actions.each do |action| %>
-                <a href="<%= action[:url] %>">
+                <a href="<%= action[:url] %>" target="<%= action[:target].present? ? action[:target] : '_self' %>">
                   <%= use_svg(action[:icon]) %> <%= action[:label] %>
                 </a>
             <% end %>
