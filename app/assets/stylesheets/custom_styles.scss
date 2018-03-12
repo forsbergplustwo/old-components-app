@@ -190,9 +190,9 @@ h3 + .form-group {
       right: 0;
       bottom: 0;
       top: 0;
-      background: rgba(33,43,53,0.86);
+      background: rgba(0,0,0,0.7);
       display: block;
-      z-index: 1;
+      z-index: 10;
       transition: all 0.2s cubic-bezier(0.945, 0.020, 0.270, 0.665);
       transition-delay: 0.1s;
   }
@@ -278,7 +278,7 @@ h3 + .form-group {
   }
 
   #sidebarCollapse {
-      z-index: 2;
+      z-index: 20;
       position: absolute;
       display: none;
       width: 40px;
