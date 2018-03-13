@@ -156,14 +156,6 @@ h3 + .form-group {
     font-weight: 600;
     margin-top: 20px;
   }
-  .card h3 {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    line-height: 16px;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-  }
   p {
     margin-right: 15px;
     margin-top: 16px;
@@ -173,6 +165,14 @@ h3 + .form-group {
   p.help-block {
     margin-top: 4px;
   }
+}
+.card h3 {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
 }
 
 /* ---------------------------------------------------
