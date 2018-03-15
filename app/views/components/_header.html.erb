@@ -51,7 +51,12 @@
         <% if secondary_actions.present? %>
           <div class="secondary-actions">
             <% secondary_actions.each do |action| %>
-                <a href="<%= action[:url] %>" target="<%= action[:target].present? ? action[:target] : '_self' %>">
+                <a href="<%= action[:url] %>"
+                  <% if !action[:data].blank? %>
+                    <% action[:data].each do |data| %>
+                      data-<%= data[:key]%>="<%= data[:value]%>"
+                    <% end %>
+                  <% end %> target="<%= action[:target].present? ? action[:target] : '_self' %>">
                   <%= use_svg(action[:icon]) %> <%= action[:label] %>
                 </a>
             <% end %>
