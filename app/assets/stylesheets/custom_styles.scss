@@ -48,6 +48,18 @@ li.active svg.icon {
 .navbar-nav li:hover svg.icon, .navbar-nav li.open svg.icon{
   fill: #fff;
 }
+.alert.alert-info svg.icon {
+  fill: #00848E;
+}
+.alert.alert-warning svg.icon {
+  fill: #C05717;
+}
+.alert.alert-danger svg.icon {
+  fill: #BF0711;
+}
+.alert.alert-success svg.icon {
+  fill: #108043;
+}
 
 //== PAGE
 //
