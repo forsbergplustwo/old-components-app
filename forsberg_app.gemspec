@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 4.2.10"
   s.add_dependency "sass-rails", '>= 3.2'
-  s.add_dependency "bootstrap-sass", '~> 3.3.7'
+  s.add_dependency "bootstrap-sass", '~> 3.4.1'
   s.add_dependency "uglifier"
   s.add_dependency "coffee-rails"
   s.add_dependency "jquery-rails"
