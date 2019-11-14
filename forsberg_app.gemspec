@@ -24,5 +24,4 @@ Gem::Specification.new do |s|
   s.add_dependency "jquery-rails"
   s.add_dependency "jbuilder"
   s.add_dependency "autoprefixer-rails"
-
 end
