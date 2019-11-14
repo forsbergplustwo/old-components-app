@@ -10,13 +10,13 @@ Gem::Specification.new do |s|
   s.authors     = ["FORSBERG+two"]
   s.email       = ["bjorn@forsbergplustwo.com"]
   s.homepage    = "https://github.com/forsbergplustwo/forsberg_app"
-  s.summary     = "Re-usable view components for Shopify apps"
-  s.description = "A set of custom re-usable view components for Shopify apps, to keep the look the same in all apps and make updating apps easier."
+  s.summary     = "Re-usable components for Shopify apps"
+  s.description = "A set of custom components for Shopify apps, to updating apps easier."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  s.add_dependency "rails", "~> 4.2.10"
+  s.add_dependency "rails", "~> 5.2.3"
   s.add_dependency "sass-rails", '>= 3.2'
   s.add_dependency "bootstrap-sass", '~> 3.4.1'
   s.add_dependency "uglifier"
